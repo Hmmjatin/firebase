@@ -30,6 +30,7 @@ const firebaseConfig = {
         firebase.database().ref('/records/'+ rollno).set(studentOBJ)
         alert("data save")
         clear()
+        show()
     }
 
     function update(){
@@ -49,6 +50,7 @@ const firebaseConfig = {
         firebase.database().ref('/records/'+ rollno).update(studentOBJ);
 
         alert("Data Updated");
+        show();
     }
 
     function del(){
@@ -57,6 +59,7 @@ const firebaseConfig = {
         firebase.database().ref('/records/' + rollno).remove();
 
         alert("Data Deleted")
+        show()
         
     }
 
