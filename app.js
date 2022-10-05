@@ -13,6 +13,8 @@ const firebaseConfig = {
     firebase.initializeApp(firebaseConfig);
 
     var studentOBJ = {}
+    
+    show()
 
     function save(){
         name = document.getElementById("name").value
@@ -50,7 +52,7 @@ const firebaseConfig = {
         firebase.database().ref('/records/'+ rollno).update(studentOBJ);
 
         alert("Data Updated");
-        show();
+        show()
     }
 
     function del(){
